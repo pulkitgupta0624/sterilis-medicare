@@ -1,7 +1,5 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import Logo from "../../Assets/logo.jpg";
-import { BsCart2 } from "react-icons/bs";
 import { HiOutlineBars3 } from "react-icons/hi2";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
@@ -15,7 +13,6 @@ import HomeIcon from "@mui/icons-material/Home";
 import InfoIcon from "@mui/icons-material/Info";
 import CommentRoundedIcon from "@mui/icons-material/CommentRounded";
 import PhoneRoundedIcon from "@mui/icons-material/PhoneRounded";
-import ShoppingCartRoundedIcon from "@mui/icons-material/ShoppingCartRounded";
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
@@ -31,9 +28,9 @@ const Navbar = () => {
       path: "/about",
     },
     {
-      text: "Testimonials",
+      text: "Products",
       icon: <CommentRoundedIcon />,
-      path: "/testimonial",
+      path: "/products",
     },
     {
       text: "Contact",
@@ -41,17 +38,16 @@ const Navbar = () => {
       path: "/contact",
     },
   ];
-
   return (
     <nav>
       <div className="nav-logo-container">
         <h1>.LOGO</h1>
       </div>
       <div className="navbar-links-container">
-        <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
-        <Link to="/product">Products</Link>
-        <Link to="/contact">Contact</Link>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/products">Products</a>
+        <a href="/contact">Contact</a>
         <button className="primary-button">Sign in</button>
         <button className="primary-button">Create account</button>
       </div>
@@ -68,7 +64,7 @@ const Navbar = () => {
           <List>
             {menuOptions.map((item) => (
               <ListItem key={item.text} disablePadding>
-                <ListItemButton component={Link} to={item.path}>
+                <ListItemButton>
                   <ListItemIcon>{item.icon}</ListItemIcon>
                   <ListItemText primary={item.text} />
                 </ListItemButton>
