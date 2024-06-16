@@ -1,5 +1,5 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import Logo from "../../Assets/logo.jpg";
 import { BsCart2 } from "react-icons/bs";
 import { HiOutlineBars3 } from "react-icons/hi2";
@@ -23,30 +23,35 @@ const Navbar = () => {
     {
       text: "Home",
       icon: <HomeIcon />,
+      path: "/",
     },
     {
       text: "About",
       icon: <InfoIcon />,
+      path: "/about",
     },
     {
       text: "Testimonials",
       icon: <CommentRoundedIcon />,
+      path: "/testimonial",
     },
     {
       text: "Contact",
       icon: <PhoneRoundedIcon />,
-    }
+      path: "/contact",
+    },
   ];
+
   return (
     <nav>
       <div className="nav-logo-container">
         <h1>.LOGO</h1>
       </div>
       <div className="navbar-links-container">
-        <a href="">Home</a>
-        <a href="">About</a>
-        <a href="">Products</a>
-        <a href="">Contact</a>
+        <Link to="/">Home</Link>
+        <Link to="/about">About</Link>
+        <Link to="/product">Products</Link>
+        <Link to="/contact">Contact</Link>
         <button className="primary-button">Sign in</button>
         <button className="primary-button">Create account</button>
       </div>
@@ -63,7 +68,7 @@ const Navbar = () => {
           <List>
             {menuOptions.map((item) => (
               <ListItem key={item.text} disablePadding>
-                <ListItemButton>
+                <ListItemButton component={Link} to={item.path}>
                   <ListItemIcon>{item.icon}</ListItemIcon>
                   <ListItemText primary={item.text} />
                 </ListItemButton>
