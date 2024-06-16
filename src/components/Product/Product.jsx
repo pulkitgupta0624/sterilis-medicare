@@ -58,6 +58,7 @@ const Product = () => {
   ];
   return (
     <div className="work-section-wrapper">
+      <Navbar/>
       <div className="work-section-top">
         <p className="primary-subheading">Products</p>
         <h1 className="primary-heading">Let's see our products</h1>
@@ -77,6 +78,7 @@ const Product = () => {
           </div>
         ))}
       </div>
+      <Footer/>
     </div>
   );
 };
