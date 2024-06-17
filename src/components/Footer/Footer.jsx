@@ -9,7 +9,7 @@ const Footer = () => {
     <div className="footer-wrapper">
       <div className="footer-section-one">
         <div className="footer-logo-container">
-          <h1>LOGO.</h1>
+          <h1>STERILIS MEDICARE</h1>
         </div>
         <div className="footer-icons">
           <BsTwitter />
