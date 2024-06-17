@@ -39,13 +39,17 @@
     background-color: orange; /* To ensure it has a background */
     z-index: 1000; /* Adjust as needed to be above other elements */
     padding: 0 2rem; /* Add padding to align content nicely */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a slight shadow for better separation */
+    box-shadow: 0 2px 4px rgb(252, 145, 5); /* Optional: Add a slight shadow for better separation */
   }
   
   .nav-logo-container {
     display: flex;
     align-items: center;
-    
+    overflow: hidden;
+    margin: auto;
+    width: 80px;
+    margin-left: 30px;
+    margin-top: 2px;
   }
   
   .navbar-links-container {
@@ -544,7 +548,7 @@
 
   .about-image {
     position: relative;
-    background-image: url('../../Assets/image4.jpg'); /* Add your image URL here */
+    background-image: url('./Assets/image4.jpg'); /* Add your image URL here */
     background-size: cover;
     background-position: center;
     width: 100%;
@@ -552,9 +556,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* color: white; */
     text-align: center;
-    /* opacity: 0.5; */
     z-index: -1;
   }
   
@@ -633,3 +635,91 @@
     font-weight: 1000;
     font-style: italic;
   }
+
+  /*yaha se login sign in*/
+  .auth-container {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background: #f7f7f7;
+  }
+  
+  .auth-logo, .auth-form {
+    flex: 1;
+    max-width: 400px;
+    margin: 20px;
+    padding: 40px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  }
+  
+  .auth-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+   
+  }
+
+  .responsive-logo {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .auth-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .auth-form h2 {
+    margin-bottom: 20px;
+  }
+  
+  .auth-form form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .auth-form input {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .auth-form button {
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 4px;
+    background: #007bff;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .auth-form button:hover {
+    background: #0056b3;
+  }
+  
+  .auth-links {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .auth-links a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .auth-links a:hover {
+    text-decoration: underline;
+  }
+  
