@@ -2,6 +2,8 @@ import React from "react";
 import image1 from "../../Assets/image1.jpg";
 import image2 from "../../Assets/image2.jpeg";
 import image3 from "../../Assets/image3.jpeg";
+import Navbar from "../Navbar/Navbar";
+import Footer from "../Footer/Footer";
 
 const Product = () => {
   const workInfoData = [
